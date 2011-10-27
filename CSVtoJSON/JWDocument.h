@@ -1,0 +1,18 @@
+//
+//  JWDocument.h
+//  CSVtoJSON
+//
+//  Created by Jonathan Watmough on 10/26/11.
+//  Copyright (c) 2011 Watmough Software. All rights reserved.
+//
+
+#import <Cocoa/Cocoa.h>
+
+@interface JWDocument : NSDocument
+{
+	NSData *rawData;
+}
+
+@property (nonatomic,retain) NSData *rawData;
+
+@end

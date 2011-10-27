@@ -1,0 +1,318 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		ABDA0E951459C0A10055B07D /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ABDA0E941459C0A10055B07D /* Cocoa.framework */; };
+		ABDA0E9F1459C0A10055B07D /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = ABDA0E9D1459C0A10055B07D /* InfoPlist.strings */; };
+		ABDA0EA11459C0A10055B07D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = ABDA0EA01459C0A10055B07D /* main.m */; };
+		ABDA0EA51459C0A10055B07D /* Credits.rtf in Resources */ = {isa = PBXBuildFile; fileRef = ABDA0EA31459C0A10055B07D /* Credits.rtf */; };
+		ABDA0EA81459C0A10055B07D /* JWDocument.m in Sources */ = {isa = PBXBuildFile; fileRef = ABDA0EA71459C0A10055B07D /* JWDocument.m */; };
+		ABDA0EAB1459C0A10055B07D /* JWDocument.xib in Resources */ = {isa = PBXBuildFile; fileRef = ABDA0EA91459C0A10055B07D /* JWDocument.xib */; };
+		ABDA0EAE1459C0A10055B07D /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = ABDA0EAC1459C0A10055B07D /* MainMenu.xib */; };
+		ABDA0EB81459C0C80055B07D /* JWCSVReader.m in Sources */ = {isa = PBXBuildFile; fileRef = ABDA0EB51459C0C80055B07D /* JWCSVReader.m */; };
+		ABDA0EB91459C0C80055B07D /* JWWindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = ABDA0EB71459C0C80055B07D /* JWWindowController.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		ABDA0E901459C0A10055B07D /* CSVtoJSON.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CSVtoJSON.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		ABDA0E941459C0A10055B07D /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
+		ABDA0E971459C0A10055B07D /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
+		ABDA0E981459C0A10055B07D /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		ABDA0E991459C0A10055B07D /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		ABDA0E9C1459C0A10055B07D /* CSVtoJSON-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "CSVtoJSON-Info.plist"; sourceTree = "<group>"; };
+		ABDA0E9E1459C0A10055B07D /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		ABDA0EA01459C0A10055B07D /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		ABDA0EA21459C0A10055B07D /* CSVtoJSON-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "CSVtoJSON-Prefix.pch"; sourceTree = "<group>"; };
+		ABDA0EA41459C0A10055B07D /* en */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; name = en; path = en.lproj/Credits.rtf; sourceTree = "<group>"; };
+		ABDA0EA61459C0A10055B07D /* JWDocument.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JWDocument.h; sourceTree = "<group>"; };
+		ABDA0EA71459C0A10055B07D /* JWDocument.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JWDocument.m; sourceTree = "<group>"; };
+		ABDA0EAA1459C0A10055B07D /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/JWDocument.xib; sourceTree = "<group>"; };
+		ABDA0EAD1459C0A10055B07D /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainMenu.xib; sourceTree = "<group>"; };
+		ABDA0EB41459C0C80055B07D /* JWCSVReader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JWCSVReader.h; sourceTree = "<group>"; };
+		ABDA0EB51459C0C80055B07D /* JWCSVReader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JWCSVReader.m; sourceTree = "<group>"; };
+		ABDA0EB61459C0C80055B07D /* JWWindowController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JWWindowController.h; sourceTree = "<group>"; };
+		ABDA0EB71459C0C80055B07D /* JWWindowController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JWWindowController.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		ABDA0E8D1459C0A10055B07D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				ABDA0E951459C0A10055B07D /* Cocoa.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		ABDA0E851459C0A00055B07D = {
+			isa = PBXGroup;
+			children = (
+				ABDA0E9A1459C0A10055B07D /* CSVtoJSON */,
+				ABDA0E931459C0A10055B07D /* Frameworks */,
+				ABDA0E911459C0A10055B07D /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		ABDA0E911459C0A10055B07D /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				ABDA0E901459C0A10055B07D /* CSVtoJSON.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		ABDA0E931459C0A10055B07D /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				ABDA0E941459C0A10055B07D /* Cocoa.framework */,
+				ABDA0E961459C0A10055B07D /* Other Frameworks */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		ABDA0E961459C0A10055B07D /* Other Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				ABDA0E971459C0A10055B07D /* AppKit.framework */,
+				ABDA0E981459C0A10055B07D /* CoreData.framework */,
+				ABDA0E991459C0A10055B07D /* Foundation.framework */,
+			);
+			name = "Other Frameworks";
+			sourceTree = "<group>";
+		};
+		ABDA0E9A1459C0A10055B07D /* CSVtoJSON */ = {
+			isa = PBXGroup;
+			children = (
+				ABDA0EB41459C0C80055B07D /* JWCSVReader.h */,
+				ABDA0EB51459C0C80055B07D /* JWCSVReader.m */,
+				ABDA0EB61459C0C80055B07D /* JWWindowController.h */,
+				ABDA0EB71459C0C80055B07D /* JWWindowController.m */,
+				ABDA0EA61459C0A10055B07D /* JWDocument.h */,
+				ABDA0EA71459C0A10055B07D /* JWDocument.m */,
+				ABDA0EA91459C0A10055B07D /* JWDocument.xib */,
+				ABDA0EAC1459C0A10055B07D /* MainMenu.xib */,
+				ABDA0E9B1459C0A10055B07D /* Supporting Files */,
+			);
+			path = CSVtoJSON;
+			sourceTree = "<group>";
+		};
+		ABDA0E9B1459C0A10055B07D /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				ABDA0E9C1459C0A10055B07D /* CSVtoJSON-Info.plist */,
+				ABDA0E9D1459C0A10055B07D /* InfoPlist.strings */,
+				ABDA0EA01459C0A10055B07D /* main.m */,
+				ABDA0EA21459C0A10055B07D /* CSVtoJSON-Prefix.pch */,
+				ABDA0EA31459C0A10055B07D /* Credits.rtf */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		ABDA0E8F1459C0A10055B07D /* CSVtoJSON */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = ABDA0EB11459C0A10055B07D /* Build configuration list for PBXNativeTarget "CSVtoJSON" */;
+			buildPhases = (
+				ABDA0E8C1459C0A10055B07D /* Sources */,
+				ABDA0E8D1459C0A10055B07D /* Frameworks */,
+				ABDA0E8E1459C0A10055B07D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = CSVtoJSON;
+			productName = CSVtoJSON;
+			productReference = ABDA0E901459C0A10055B07D /* CSVtoJSON.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		ABDA0E871459C0A00055B07D /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0420;
+				ORGANIZATIONNAME = "Watmough Software";
+			};
+			buildConfigurationList = ABDA0E8A1459C0A00055B07D /* Build configuration list for PBXProject "CSVtoJSON" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = ABDA0E851459C0A00055B07D;
+			productRefGroup = ABDA0E911459C0A10055B07D /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				ABDA0E8F1459C0A10055B07D /* CSVtoJSON */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		ABDA0E8E1459C0A10055B07D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				ABDA0E9F1459C0A10055B07D /* InfoPlist.strings in Resources */,
+				ABDA0EA51459C0A10055B07D /* Credits.rtf in Resources */,
+				ABDA0EAB1459C0A10055B07D /* JWDocument.xib in Resources */,
+				ABDA0EAE1459C0A10055B07D /* MainMenu.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		ABDA0E8C1459C0A10055B07D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				ABDA0EA11459C0A10055B07D /* main.m in Sources */,
+				ABDA0EA81459C0A10055B07D /* JWDocument.m in Sources */,
+				ABDA0EB81459C0C80055B07D /* JWCSVReader.m in Sources */,
+				ABDA0EB91459C0C80055B07D /* JWWindowController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		ABDA0E9D1459C0A10055B07D /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				ABDA0E9E1459C0A10055B07D /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		ABDA0EA31459C0A10055B07D /* Credits.rtf */ = {
+			isa = PBXVariantGroup;
+			children = (
+				ABDA0EA41459C0A10055B07D /* en */,
+			);
+			name = Credits.rtf;
+			sourceTree = "<group>";
+		};
+		ABDA0EA91459C0A10055B07D /* JWDocument.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				ABDA0EAA1459C0A10055B07D /* en */,
+			);
+			name = JWDocument.xib;
+			sourceTree = "<group>";
+		};
+		ABDA0EAC1459C0A10055B07D /* MainMenu.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				ABDA0EAD1459C0A10055B07D /* en */,
+			);
+			name = MainMenu.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		ABDA0EAF1459C0A10055B07D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.6;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		ABDA0EB01459C0A10055B07D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.6;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		ABDA0EB21459C0A10055B07D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "CSVtoJSON/CSVtoJSON-Prefix.pch";
+				INFOPLIST_FILE = "CSVtoJSON/CSVtoJSON-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		ABDA0EB31459C0A10055B07D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "CSVtoJSON/CSVtoJSON-Prefix.pch";
+				INFOPLIST_FILE = "CSVtoJSON/CSVtoJSON-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		ABDA0E8A1459C0A00055B07D /* Build configuration list for PBXProject "CSVtoJSON" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				ABDA0EAF1459C0A10055B07D /* Debug */,
+				ABDA0EB01459C0A10055B07D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		ABDA0EB11459C0A10055B07D /* Build configuration list for PBXNativeTarget "CSVtoJSON" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				ABDA0EB21459C0A10055B07D /* Debug */,
+				ABDA0EB31459C0A10055B07D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = ABDA0E871459C0A00055B07D /* Project object */;
+}
