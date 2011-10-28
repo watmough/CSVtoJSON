@@ -117,7 +117,7 @@
 {
 	int ch = 0;
 	// buffer to add characters to
-	char buffer[MAX_FIELD];
+	char buffer[MAX_FIELD+1];
 	char *pos = buffer;
 	BOOL haveChars = NO;
 	// not in a string, set quote to look for matching end of string
@@ -133,7 +133,7 @@
 			return pos==buffer ? nil : [NSString stringWithCString:buffer encoding:NSUTF8StringEncoding];
 		}
 		// check for an escape character
-		else if (string && [self isEscape:ch]) {
+		else if (string && [self isEscape:ch] && pos-buffer<MAX_FIELD-1) {
 			// read the next character and write both - right thing to do?
 			int escaped = [self getCh];
 			if (![self isEOL:escaped] && ![self isEOF:escaped]) {
@@ -143,7 +143,7 @@
 		}
 		// check if we are starting a string, and if so, remember the quote character used
 		// only recognize a string at the start of a field
-		else if (!string && [self isStringQuote:ch] && !haveChars)
+		else if (!string && [self isStringQuote:ch] && !haveChars && pos-buffer<MAX_FIELD)
 		{
 			// start a string - 
 			quote = ch;
@@ -151,18 +151,28 @@
 			*pos++ = quote;
 		}
 		// check if we are in a string, and have matched the required end quote
-		else if (string && [self isStringQuote:ch] && ch==quote) {
+		else if (string && [self isStringQuote:ch] && ch==quote && pos-buffer<MAX_FIELD) {
 			// stop a string
 			string = NO;
 			*pos++ = quote;
 		}
-		// handle the default case of simply adding a character to our buffer
-		else {
+		// handle the default case of simply adding a character to our buffer, as long as we
+		// have space - ensures we always parse full fields, even if we don't write it all.
+		// we may be in a world of hurt if we are halfway through a unicode character... ruh roh
+		else if (pos-buffer<MAX_FIELD) {
 			*pos++ = ch;
 			haveChars = YES;
 		}
+		else {
+			// throw a buffer too small exception
+			NSException *exception = [NSException 
+									  exceptionWithName:@"JWCSVReader.m: readField: Parse error"
+									  reason:[NSString stringWithFormat:@"Field longer than %d bytes",MAX_FIELD] userInfo:nil];
+			@throw exception;
+			return nil;
+		}
 	}
-	// if we get here, we must have hit EOL or EOF, just return what we have
+	// if we get here, we must have hit EOL or EOF or filled the buffer, just return what we have
 	// added to the buffer, terminated with \0, and stuffed into an NSString.
 	[self unGetCh];
 	*pos = '\0';
