@@ -11,8 +11,15 @@
 @interface JWDocument : NSDocument
 {
 	NSData *rawData;
+	NSData *jsonData;
+	NSArray *cocoaData;
 }
 
+// properties
 @property (nonatomic,retain) NSData *rawData;
+@property (nonatomic,retain) NSData *jsonData;
+@property (nonatomic,retain) NSArray *cocoaData;
+
+// methods
 
 @end

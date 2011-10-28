@@ -12,16 +12,14 @@
 {
 	NSTextView *rawTextView;
 	NSTableView *tableView;
-	
-	NSArray *rows;
+	NSTextView *jsonTextView;
 }
 
 @property(nonatomic,retain) IBOutlet NSTextView *rawTextView;
 @property(nonatomic,retain) IBOutlet NSTableView *tableView;
-@property(nonatomic,retain) NSArray *rows;
+@property(nonatomic,retain) IBOutlet NSTextView *jsonTextView;
 
 // methods
 - (void)updateRawTextView;
-- (void)processRawText;
 
 @end

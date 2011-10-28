@@ -12,20 +12,22 @@
 
 @interface JWCSVReader : NSObject
 {
-	// internal
+	// internal to parsing
 	const char *bytes;
 	unsigned long length;
-	
+	unsigned int chPos;
+
+	// safe to access if required
 	NSData *rawData;
-	
 	NSArray *rows;
 }
 
+// properties
 @property(nonatomic,retain) NSData *rawData;
 @property(nonatomic,retain) NSArray *rows;
 
 // methods
 - (id)initWithData:(NSData*)theData;
-- (NSArray*)convert;
+- (NSArray*)parseRawCSV;
 
 @end

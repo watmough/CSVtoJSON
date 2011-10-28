@@ -9,12 +9,48 @@
 		<dict>
 			<key>CFBundleTypeExtensions</key>
 			<array>
+				<string>json</string>
+			</array>
+			<key>CFBundleTypeMIMETypes</key>
+			<array>
+				<string>text/json</string>
+			</array>
+			<key>CFBundleTypeName</key>
+			<string>JSON Text</string>
+			<key>CFBundleTypeRole</key>
+			<string>Editor</string>
+			<key>NSDocumentClass</key>
+			<string>JWDocument</string>
+		</dict>
+		<dict>
+			<key>CFBundleTypeExtensions</key>
+			<array>
+				<string>txt</string>
+			</array>
+			<key>CFBundleTypeMIMETypes</key>
+			<array>
+				<string>text/plain</string>
+			</array>
+			<key>CFBundleTypeName</key>
+			<string>Plain Text</string>
+			<key>CFBundleTypeRole</key>
+			<string>Editor</string>
+			<key>NSDocumentClass</key>
+			<string>JWDocument</string>
+		</dict>
+		<dict>
+			<key>CFBundleTypeExtensions</key>
+			<array>
 				<string>csv</string>
 			</array>
 			<key>CFBundleTypeIconFile</key>
-			<string></string>
+			<string>CSVtoJSON</string>
+			<key>CFBundleTypeMIMETypes</key>
+			<array>
+				<string>text/csv</string>
+			</array>
 			<key>CFBundleTypeName</key>
-			<string>DocumentType</string>
+			<string>CSV Text</string>
 			<key>CFBundleTypeOSTypes</key>
 			<array>
 				<string>????</string>
@@ -28,7 +64,7 @@
 	<key>CFBundleExecutable</key>
 	<string>${EXECUTABLE_NAME}</string>
 	<key>CFBundleIconFile</key>
-	<string></string>
+	<string>CSVtoJSON.icns</string>
 	<key>CFBundleIdentifier</key>
 	<string>com.watmoughsoftware.${PRODUCT_NAME:rfc1034identifier}</string>
 	<key>CFBundleInfoDictionaryVersion</key>

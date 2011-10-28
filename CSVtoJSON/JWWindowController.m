@@ -9,13 +9,17 @@
 #import "JWWindowController.h"
 #import "JWDocument.h"
 #import "JWCSVReader.h"
+#import "JSONKit.h"
 
 @implementation JWWindowController
 
 @synthesize rawTextView;
 @synthesize tableView;
-@synthesize rows;
+@synthesize jsonTextView;
 
+//--------------------------------------------------------------------------------
+// initWithWindow:
+//--------------------------------------------------------------------------------
 - (id)initWithWindow:(NSWindow *)window
 {
     self = [super initWithWindow:window];
@@ -26,19 +30,25 @@
     return self;
 }
 
+//--------------------------------------------------------------------------------
+// windowDidLoad
+//--------------------------------------------------------------------------------
 - (void)windowDidLoad
 {
     [super windowDidLoad];
-    
-    // Implement this method to handle any initialization after your window controller's window has been loaded from its nib file.
-	
-	// do we have a document?
-	[self updateRawTextView];
+
+	// update document if we have one
+	if (self.document && [self.document rawData]) {
+		[self updateRawTextView];
+	}
 }
 
 #pragma mark -
 #pragma mark UI Support
 
+//--------------------------------------------------------------------------------
+// updateRawTextView
+//--------------------------------------------------------------------------------
 - (void)updateRawTextView
 {
 	// get document
@@ -49,34 +59,40 @@
 	NSString *string = [NSString stringWithUTF8String:[rawData bytes]];
 	[rawTextView setString:string];
 	
-	// ### process it
-	[self processRawText];
+	// convert the raw into fields
+	JWCSVReader *reader = [[JWCSVReader alloc] initWithData:[self.document rawData]];
+	[[self document] setCocoaData:[reader parseRawCSV]];
+	[reader release];
+	
+	// display the json data
+	[self.document setJsonData:[[self.document cocoaData] JSONData]];
+	[jsonTextView setString:[[self.document cocoaData] JSONString]];
 }
 
 #pragma mark -
 #pragma mark Table View Support
 
+//--------------------------------------------------------------------------------
+// numberOfRowsInTableView
+// just the number of parsed rows of the CSV data.
+//--------------------------------------------------------------------------------
 - (NSInteger)numberOfRowsInTableView:(NSTableView *)aTableView
 {
+	NSArray *rows = [[self document] cocoaData];
 	return [rows count];
 }
 
+//--------------------------------------------------------------------------------
+// tableView:objectValueForTableColumn:row:
+// we just use the column id 0-7 to identify what column of data we want.
+//--------------------------------------------------------------------------------
 - (id)tableView:(NSTableView *)aTableView objectValueForTableColumn:(NSTableColumn *)aTableColumn row:(NSInteger)rowIndex
 {
-	NSArray *colArray = [rows objectAtIndex:rowIndex];
 	NSInteger colIndex = [(NSString*)[aTableColumn identifier] integerValue];
+	// get the columnar data
+	NSArray *rows = [[self document] cocoaData];
+	NSArray *colArray = [rows objectAtIndex:rowIndex];
 	return colIndex<[colArray count] ? [colArray objectAtIndex:colIndex] : nil;
-}
-
-#pragma mark -
-#pragma mark Processing
-
-- (void)processRawText
-{
-	// convert the raw into fields
-	JWCSVReader *reader = [[JWCSVReader alloc] initWithData:[self.document rawData]];
-	self.rows = [reader convert];
-	NSLog(@"Converted data to %@",[rows description]);
 }
 
 @end
